@@ -7,10 +7,10 @@ class Api extends Component {
             <div>
                 <div className="page-wrap">
                     <div className="main-menu">
-                        <Menu/>
+                        <Menu />
                     </div>
-                    <br/>
-                    <br/>
+                    <br />
+                    <br />
                     <section id="about">
                         <div className="container">
                             <div className="row about-container">
@@ -48,46 +48,26 @@ class Api extends Component {
                                 </div>
                                 <div className="col-lg-6 background order-lg-2 order-1 wow fadeInRight"></div>
                             </div>
-                            <br/>
+                            <br />
                             <div className="col-12">
                                 <h3>Documentation :</h3>
                             </div>
-                            <br/>
+                            <br />
                             <ul>
-                                <li>
-                                    <strong>Récupérer tous les Loi de finances 2000 - 2018 :</strong>
-                                    <br/>
-                                    <div style={{marginLeft:100,marginTop:20}}>[GET]: http://localhost:5000/api/finance/</div>
-                                    <br/>
-                                    <div style={{marginLeft:100,marginTop:2}}>
-                                    Array(
-                                        Obj(
-                                            "_id": "",
-                                            "year": ,
-                                            "montant": "",
-                                            "recette_t_1": "",
-                                            "recette_t_2": "",
-                                            "recette_f": ""
-                                            ...
-                                        )
-                                    ,
-                                    ...
-                                    )
-                                    </div>
-                                </li>
-                                <li style={{marginTop:20}}>
-                                    <strong>Récupérer Loi de finances par Année:</strong>
-                                    <br/>
-                                    <div style={{marginLeft:100,marginTop:20}}>[GET]: http://localhost:5000/finance/year/[année]</div>
-                                    <br/>
-                                    <div style={{marginLeft:100,marginTop:2}}>
+
+                                <li style={{ marginTop: 20 }}>
+                                    <strong>Récupérer Les statistiques des reclamations par Année:</strong>
+                                    <br />
+                                    <div style={{ marginLeft: 100, marginTop: 20 }}>[GET]: http://localhost:5000/reclamation/year/[année]</div>
+                                    <br />
+                                    <div style={{ marginLeft: 100, marginTop: 2 }}>
                                         Obj(
                                         "_id": "",
-                                        "year": ,
-                                        "montant": "",
-                                        "recette_t_1": "",
-                                        "recette_t_2": "",
-                                        "recette_f": ""
+                                        "annee": ,
+                                        "titre": "",
+                                        "lieu": "",
+                                        "description": "",
+                                        "sevirite": ""
                                         ...
                                         )
                                     </div>

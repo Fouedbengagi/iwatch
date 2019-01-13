@@ -47,6 +47,65 @@
             }, {
                     searchControlProvider: 'yandex#search'
                 });
+
+            var myPlacemark = new ymaps.Placemark([33.8189700, 10.1657900], {
+                balloonContentHeader: "des trous dans les rues",
+                balloonContentBody: "plusieurs trous dans les rues voir photo",
+                hintContent: "corruption",
+                iconContent: "Gabes"
+            }, {
+                    preset: "islands#redStretchyIcon"
+                });
+            myMap.geoObjects.add(myPlacemark);
+            var myPlacemark2 = new ymaps.Placemark([34.7405600, 10.7602800], {
+                balloonContentHeader: "Projet non terminé",
+                balloonContentBody: "un projet de construction d'une ecole est abondonnée",
+                hintContent: "corruption",
+                iconContent: "Sfax"
+            }, {
+                    preset: "islands#redStretchyIcon"
+                });
+            myMap.geoObjects.add(myPlacemark2);
+            var myPlacemark_Bizerte = new ymaps.Placemark([37.29, 9.87], {
+                balloonContentHeader: "Projet mal fait",
+                balloonContentBody: "un projet de construction d'un rue est tres mal fait , la rue est plein de trous",
+                hintContent: "corruption",
+                iconContent: "Bizert"
+            }, {
+                    preset: "islands#redStretchyIcon"
+                });
+            myMap.geoObjects.add(myPlacemark_Bizerte);
+            var myPlacemark_Ariana = new ymaps.Placemark([36.8625, 10.19556], {
+                balloonContentHeader: "un responsable utilise son pouvoir",
+                balloonContentBody: "un responsable dans la municipalité utilise son pouvoir pour des besoins personnels",
+                hintContent: "corruption",
+                iconContent: "Ariana"
+            }, {
+                    preset: "islands#redStretchyIcon"
+                });
+            myMap.geoObjects.add(myPlacemark_Ariana);
+            var myPlacemark_Manouba = new ymaps.Placemark([36.80778, 10.10111], {
+                balloonContentHeader: "reconstruction d'une rue deja nouvellement",
+                balloonContentBody: "reconstruction d'une rue deja vouvellement construite",
+                hintContent: "corruption",
+                iconContent: "Manouba"
+            }, {
+                    preset: "islands#redStretchyIcon"
+                });
+            myMap.geoObjects.add(myPlacemark_Manouba);
+            var myPlacemark_Ben_Arous = new ymaps.Placemark([36.75333, 10.2222], {
+                balloonContentHeader: "Projets et Programmes nouveaux",
+                balloonContentBody: "343 000 Dinars",
+                hintContent: "corruption",
+                iconContent: "Ben Arous"
+            }, {
+                    preset: "islands#redStretchyIcon"
+                });
+            myMap.geoObjects.add(myPlacemark_Ben_Arous);
+            view.goTo({
+                zoom: 6.6,
+                center: [10.1933700, 34.1001200]
+            });
             var myGeoObjects = [];
 
             for (var i = 0; i < coords.length; i++) {

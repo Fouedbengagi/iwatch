@@ -5,8 +5,8 @@ import logo from './chatbot.png';
 
 class Chatbot extends Component {
   componentDidMount() {
-    addResponseMessage("Welcome to our chatbot!");
-    addResponseMessage("ask me e question!");
+    addResponseMessage("bienvenue dans notre chatbot!");
+    addResponseMessage("posez une question!");
   }
 
   handleNewUserMessage = (newMessage) => {
@@ -14,17 +14,21 @@ class Chatbot extends Component {
     if (newMessage == "statistiques") {
       addResponseMessage("vous pouvez consulter les statiques à travers cette page http://localhost:3000/statistiques!");
     }
-    if (newMessage == "map") {
+    else if (newMessage == "map") {
       addResponseMessage("vous pouvez consulter les statiques à travers cette page http://localhost:3000/map!");
     }
-    if (newMessage == "bonjour") {
+    else if (newMessage == "bonjour") {
       addResponseMessage("bonjour monsieur , comment je peux vous aidez");
     }
-    if (newMessage == "statistiques svp") {
+    else if (newMessage == "statistiques svp") {
       addResponseMessage("vous pouvez consulter les statiques à travers cette page http://localhost:3000/statistiques!");
     }
-    if (newMessage == "quel sont vos services") {
-      addResponseMessage("ici vous trouvez nos services http://localhost:3000/statistiques");
+    else if (newMessage == "quel sont vos services") {
+      addResponseMessage("ici vous trouvez nos services http://localhost:3000/service");
+    }
+    else {
+      addResponseMessage("j'ai pas compris votre question");
+
     }
 
     // Now send the message throught the backend API
