@@ -35,7 +35,7 @@ class TablighComponent extends Component {
     description :'',
     type :''
     };
-  
+    this.handleChange = this.handleChange.bind(this);
   }
 
   componentWillMount() {
@@ -82,11 +82,9 @@ class TablighComponent extends Component {
 
 
   //_____________________________________//
-  handleUserInput (e) {
-		const name = e.target.name;
-    const value = e.target.value;
-		this.setState({[name]: value});
-	  }	
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
 
 addTabligh = (e) =>
 {
@@ -157,7 +155,7 @@ database.ref('reclamations/' + offerRefKey).set(reclamationData);
 
      <div className="form-group">
     <label for="exampleFormControlTextarea1">Description mte3ek !</label>
-    <textarea  onChange={(event) => this.handleUserInput(event)} value={this.state.description} className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <textarea  onChange={this.handleChange} value={this.state.description} className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
     </div>
      
      
